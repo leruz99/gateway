@@ -32,7 +32,6 @@ const auth_type_defs = gql`
   }
   type Query {
     getUser(id:Int!):User!
-    getUsers():[User]!
   }
   type Mutation {
     createUser(user:UserInput!):Tokens!

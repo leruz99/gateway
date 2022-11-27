@@ -1,4 +1,4 @@
-/*const {gql} = require('apollo-server');
+const {gql} = require('apollo-server');
 const product_type_defs = gql`
 
   type Product {
@@ -44,5 +44,3 @@ const product_type_defs = gql`
 `;
 
 module.exports = product_type_defs;
-
-*/
