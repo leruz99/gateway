@@ -1,8 +1,9 @@
 const {ApolloServer} = require('apollo-server');
 
-const typeDefs = require('./typeDefs/auth_type_defs');
-const resolvers = require('./resolvers/auth_resolver');
+const typeDefs = require('./typeDefs' );
+const resolvers = require('./resolvers');
 const AuthAPI = require('./dataSources/auth_api');
+const ProductAPI = require('./dataSources/product_api');
 
 //const auth = require('./utils/auth');
 
@@ -11,6 +12,7 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => ({
     authAPI: new AuthAPI(),
+    productAPI: new ProductAPI(),
 
   }),
   introspection: true,
